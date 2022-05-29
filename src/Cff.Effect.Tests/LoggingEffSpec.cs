@@ -18,7 +18,7 @@ public record LoggingEffSpec()
     }
 
     [Theory, AutoData]
-    public async Task Info(string value, CancellationTokenSource cts)
+    public void Info(string value, CancellationTokenSource cts)
     {
         using var loggerFactory = TestLoggerFactory.Create();
         var logger = loggerFactory.CreateLogger<LoggingEffSpec>();
