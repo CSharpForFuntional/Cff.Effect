@@ -8,8 +8,8 @@ namespace Cff.Effect.Json;
 public interface HasJson<RT> : HasJsonAbstract<RT>
     where RT : struct, HasJsonAbstract<RT>
 {
-    Eff<RT, IJson> HasJsonAbstract<RT>.JsonEff => Eff<RT, IJson>(rt => new Json(new JsonSerializerOptions
+    IJson HasJsonAbstract<RT>.Json => new Json(new JsonSerializerOptions
     {
         PropertyNameCaseInsensitive = false,
-    }));
+    });
 }

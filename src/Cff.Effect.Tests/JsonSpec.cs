@@ -4,7 +4,7 @@ using Cff.Effect.Json;
 
 namespace Cff.Effect.Tests;
 
-public class JsonSpec
+public class JsonEffSpec
 {
     public readonly record struct RT(CancellationTokenSource CancellationTokenSource) :
         HasCancelDefault<RT>,

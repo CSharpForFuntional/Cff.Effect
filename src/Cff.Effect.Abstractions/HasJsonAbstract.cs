@@ -14,5 +14,6 @@ public interface IJson
 public interface HasJsonAbstract<RT> : HasCancel<RT>
     where RT : struct, HasJsonAbstract<RT>, HasCancel<RT>
 {
-    Eff<RT, IJson> JsonEff { get; }
+    IJson Json { get; }
+    Eff<RT, IJson> JsonEff => Eff<RT, IJson>(rt => Json);
 }
