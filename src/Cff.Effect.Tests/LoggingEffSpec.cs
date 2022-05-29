@@ -32,4 +32,20 @@ public record LoggingEffSpec()
         var log = Assert.Single(loggerFactory.Sink.LogEntries);
         Assert.Equal(value, log.Message);
     }
+
+    [Theory, AutoData]
+    public void Error1(string value, CancellationTokenSource cts)
+    {
+        using var loggerFactory = TestLoggerFactory.Create();
+        var logger = loggerFactory.CreateLogger<LoggingEffSpec>();
+
+        var q = from x in Logging<RT>.ErrorEff(value)
+                select x;
+
+        var rt = new RT(cts, logger);
+        var r = q.Run(rt);
+
+        var log = Assert.Single(loggerFactory.Sink.LogEntries);
+        Assert.Equal(value, log.Exception?.Message);
+    }
 }
