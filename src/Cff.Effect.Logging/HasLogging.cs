@@ -6,8 +6,8 @@ namespace Cff.Effect.Logging;
 
 [Typeclass("*")]
 public interface HasLogging<RT> : HasLoggingAbstract<RT>
-    where RT : struct, HasLoggingAbstract<RT>
+    where RT : struct, HasLogging<RT>
 {
     ILogger Logger { get; }
-    ILogging HasLoggingAbstract<RT>.Logging => new Logging(Logger);
+    Eff<RT, ILogging> HasLoggingAbstract<RT>.LoggingEff => Eff<RT, ILogging>(rt => new Logging(rt.Logger));
 }

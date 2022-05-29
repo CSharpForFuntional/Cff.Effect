@@ -12,6 +12,5 @@ public interface ILogging
 public interface HasLoggingAbstract<RT> : HasCancel<RT>
     where RT : struct, HasLoggingAbstract<RT>
 {
-    ILogging Logging { get; }
-    Eff<RT, ILogging> LoggingEff => Eff<RT, ILogging>(rt => Logging);
+    Eff<RT, ILogging> LoggingEff { get; }
 }

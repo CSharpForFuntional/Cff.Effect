@@ -1,13 +1,14 @@
 using AutoFixture.Xunit2;
-using Castle.Core.Logging;
 using Cff.Effect.Abstractions;
 using Cff.Effect.Logging;
+using MELT;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Logging.Abstractions;
 using ILogger = Microsoft.Extensions.Logging.ILogger;
 
 namespace Cff.Effect.Tests;
 
-public record LoggingEffSpec(ILogger<LoggingEffSpec> Logger)
+public record LoggingEffSpec()
 {
     public readonly record struct RT(CancellationTokenSource CancellationTokenSource,
                                      ILogger Logger) :
@@ -19,11 +20,16 @@ public record LoggingEffSpec(ILogger<LoggingEffSpec> Logger)
     [Theory, AutoData]
     public async Task Info(string value, CancellationTokenSource cts)
     {
-        var q = from x in Logging<RT>.Info(value)
+        using var loggerFactory = TestLoggerFactory.Create();
+        var logger = loggerFactory.CreateLogger<LoggingEffSpec>();
+
+        var q = from x in Logging<RT>.InfoEff(value)
                 select x;
 
-        var r = q.Run(new RT(cts, Logger));
+        var rt = new RT(cts, logger);
+        var r = q.Run(rt);
 
-
+        var log = Assert.Single(loggerFactory.Sink.LogEntries);
+        Assert.Equal(value, log.Message);
     }
 }
