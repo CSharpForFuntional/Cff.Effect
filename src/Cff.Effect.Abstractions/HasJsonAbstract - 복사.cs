@@ -1,0 +1,12 @@
+using LanguageExt.Attributes;
+using LanguageExt.Effects.Traits;
+
+namespace Cff.Effect.Abstractions;
+
+[Typeclass("*")]
+public interface HasCancelDefault<RT> : HasCancel<RT>
+    where RT : struct, HasCancel<RT>
+{
+    RT HasCancel<RT>.LocalCancel => default;
+    CancellationToken HasCancel<RT>.CancellationToken => CancellationTokenSource.Token;
+}
