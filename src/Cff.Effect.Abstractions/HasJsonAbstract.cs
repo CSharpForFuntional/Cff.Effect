@@ -12,7 +12,7 @@ public interface IJson
 
 [Typeclass("*")]
 public interface HasJsonAbstract<RT> : HasCancel<RT>
-    where RT : struct, HasJsonAbstract<RT>, HasCancel<RT>
+    where RT : struct, HasJsonAbstract<RT>
 {
     IJson Json { get; }
     Eff<RT, IJson> JsonEff => Eff<RT, IJson>(rt => Json);

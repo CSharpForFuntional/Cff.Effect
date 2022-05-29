@@ -25,6 +25,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Cff.Effect.Json\Cff.Effect.Json.csproj" />
+    <ProjectReference Include="..\Cff.Effect.Logging\Cff.Effect.Logging.csproj" />
     <ProjectReference Include="..\Cff.Effect\Cff.Effect.csproj" />
   </ItemGroup>
 

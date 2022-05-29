@@ -21,8 +21,6 @@ public class JsonEffWithMockSpec
                 select x;
 
         var r = new RT(cts, json.Object);
-
-
     }
 
     [Theory, AutoData]
