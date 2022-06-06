@@ -3,16 +3,12 @@ using Cff.Effect.Abstractions;
 using Cff.Effect.Abstractions.Domain;
 using Cff.Effect.Aes;
 using Cff.Effect.Json;
-using Cff.Effect.Sha;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
 
 namespace Cff.Effect.Tests;
 
 public class Aes256EffSpec
 {
-    public readonly record struct RT(CancellationTokenSource CancellationTokenSource,
-                                     Abstractions.Domain.AesKey AesKey) :
+    public readonly record struct RT(CancellationTokenSource CancellationTokenSource, AesKey AesKey) :
         HasCancelDefault<RT>,
         HasJson<RT>,
         HasAes<RT>
