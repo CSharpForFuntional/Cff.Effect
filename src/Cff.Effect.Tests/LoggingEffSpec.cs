@@ -3,7 +3,6 @@ using Cff.Effect.Abstractions;
 using Cff.Effect.Logging;
 using MELT;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Logging.Abstractions;
 using ILogger = Microsoft.Extensions.Logging.ILogger;
 
 namespace Cff.Effect.Tests;

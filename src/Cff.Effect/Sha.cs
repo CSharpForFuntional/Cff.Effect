@@ -1,6 +1,5 @@
 using System.Text;
 using Cff.Effect.Abstractions;
-using Cff.Effect.Abstractions.Domain;
 
 namespace Cff.Effect;
 

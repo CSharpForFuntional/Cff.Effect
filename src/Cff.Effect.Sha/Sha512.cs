@@ -1,6 +1,5 @@
 using System.Security.Cryptography;
 using Cff.Effect.Abstractions;
-using Cff.Effect.Abstractions.Domain;
 
 namespace Cff.Effect.Sha;
 

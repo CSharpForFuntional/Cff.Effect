@@ -5,7 +5,7 @@ using Cff.Effect.Sha;
 
 namespace Cff.Effect.Tests;
 
-public class ShaEffSpec
+public class Sha512EffSpec
 {
     public readonly record struct RT(CancellationTokenSource CancellationTokenSource) :
         HasCancelDefault<RT>,

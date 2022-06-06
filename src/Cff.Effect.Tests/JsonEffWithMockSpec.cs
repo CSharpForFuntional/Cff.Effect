@@ -1,6 +1,5 @@
 using AutoFixture.Xunit2;
 using Cff.Effect.Abstractions;
-using Cff.Effect.Json;
 using Moq;
 
 namespace Cff.Effect.Tests;
@@ -26,6 +25,5 @@ public class JsonEffWithMockSpec
     [Theory, AutoData]
     public void Deserialize(CancellationTokenSource cts)
     {
-        var value = "{\"A\":\"System.Private.CoreLib\",\"T\":\"System.String\",\"V\":\"value9cf21a70-afd1-4031-b622-85cd54870724\"}";
     }
 }
