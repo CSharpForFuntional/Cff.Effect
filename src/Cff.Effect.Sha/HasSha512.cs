@@ -1,8 +1,7 @@
 using Cff.Effect.Abstractions;
-using Cff.Effect.Sha;
 using LanguageExt.Attributes;
 
-namespace Cff.Effect.Logging;
+namespace Cff.Effect.Sha;
 
 [Typeclass("*")]
 public interface HasSha512<RT> : HasShaAbstract<RT>
