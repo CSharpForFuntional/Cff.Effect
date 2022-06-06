@@ -6,7 +6,7 @@ namespace Cff.Effect.Json;
 
 [Typeclass("*")]
 public interface HasJson<RT> : HasJsonAbstract<RT>
-    where RT : struct, HasJsonAbstract<RT>
+    where RT : struct, HasJson<RT>
 {
     IJson HasJsonAbstract<RT>.Json => new Json(new JsonSerializerOptions
     {

@@ -5,7 +5,7 @@ namespace Cff.Effect.Abstractions;
 
 [Typeclass("*")]
 public interface HasCancelDefault<RT> : HasCancel<RT>
-    where RT : struct, HasCancel<RT>
+    where RT : struct, HasCancelDefault<RT>
 {
     RT HasCancel<RT>.LocalCancel => default;
     CancellationToken HasCancel<RT>.CancellationToken => CancellationTokenSource.Token;
