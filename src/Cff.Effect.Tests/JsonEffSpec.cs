@@ -13,11 +13,9 @@ public class JsonEffSpec
     }
 
     [Theory, AutoData]
-    public async Task Serialize(string value, CancellationTokenSource cts)
+    public void Serialize(string value, CancellationTokenSource cts)
     {
-        var q = from x in Json<RT>.SerializeEff(value)
-                select x;
-
+        var q = Json<RT>.SerializeEff(value);
         var r = q.Run(new RT(cts));
 
         Assert.Equal($"{{\"A\":\"System.Private.CoreLib\",\"T\":\"System.String\",\"V\":\"{value}\"}}", r.ThrowIfFail());
@@ -28,9 +26,7 @@ public class JsonEffSpec
     {
         var value = "{\"A\":\"System.Private.CoreLib\",\"T\":\"System.String\",\"V\":\"value9cf21a70-afd1-4031-b622-85cd54870724\"}";
 
-        var q = from x in Json<RT>.DeserializeEff(value)
-                select x;
-
+        var q = Json<RT>.DeserializeEff(value);
         var r = q.Run(new RT(cts));
 
         Assert.Equal("value9cf21a70-afd1-4031-b622-85cd54870724", r.ThrowIfFail());

@@ -6,19 +6,16 @@
     <PackageProjectUrl>https://github.com/CSharpForFuntional/Cff.Effect</PackageProjectUrl>
     <PackageLicenseUrl>https://github.com/CSharpForFuntional/Cff.Effect/blob/master/LICENSE</PackageLicenseUrl>
     <NoWarn>$(NoWarn);CS1591;xUnit1013</NoWarn>
-  </PropertyGroup>
-  <PropertyGroup>
+    <EnablePreviewFeatures>True</EnablePreviewFeatures>
     <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
-  </PropertyGroup>
-  <ItemGroup>
-    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" />
-    <None Include="$(SolutionDir)..\icon.png" Pack="true" PackagePath="\"/>
-  </ItemGroup>
-  <PropertyGroup>
     <PackageIcon>icon.png</PackageIcon>
     <RepositoryUrl>https://github.com/CSharpForFuntional/Cff.Effect</RepositoryUrl>
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
   </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" />
+    <None Include="$(SolutionDir)..\icon.png" Pack="true" PackagePath="\"/>
+  </ItemGroup>
 </Project>

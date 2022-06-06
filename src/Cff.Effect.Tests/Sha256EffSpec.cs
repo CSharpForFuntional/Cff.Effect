@@ -17,7 +17,7 @@ public class Sha256EffSpec
     }
 
     [Theory, AutoData]
-    public async Task Serialize(CancellationTokenSource cts)
+    public async Task Serialize(CancellationTokenSource cts!!)
     {
         var host = Host.CreateDefaultBuilder()
                        .ConfigureServices(service =>

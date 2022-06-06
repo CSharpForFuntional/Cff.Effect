@@ -14,16 +14,14 @@ public class JsonEffWithMockSpec
     }
 
     [Theory, AutoData]
-    public async Task Serialize(string value, CancellationTokenSource cts, Mock<IJson> json)
+    public void Serialize(string value, CancellationTokenSource cts, Mock<IJson> json)
     {
-        var q = from x in Json<RT>.SerializeEff(value)
-                select x;
+        _ = json.Setup(x => x.Serialize(It.IsAny<string>()))
+                .Returns(() => "1");
 
-        var r = new RT(cts, json.Object);
-    }
+        var q = Json<RT>.SerializeEff(value);
+        var r = q.Run(new RT(cts, json.Object));
 
-    [Theory, AutoData]
-    public void Deserialize(CancellationTokenSource cts)
-    {
+        Assert.Equal("1", r.ThrowIfFail());
     }
 }
