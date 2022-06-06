@@ -8,7 +8,6 @@ public class JsonSpec
     public void Serialize(string value)
     {
         var sut = new Json(default);
-
         var ret = sut.Serialize(value);
 
         Assert.Equal($"{{\"A\":\"System.Private.CoreLib\",\"T\":\"System.String\",\"V\":\"{value}\"}}", ret);

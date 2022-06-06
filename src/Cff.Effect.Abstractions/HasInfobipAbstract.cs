@@ -8,7 +8,7 @@ public interface IInfobip
 
 }
 
-    [Typeclass("*")]
+[Typeclass("*")]
 public interface HasInfobipEmailAbstract<RT> : HasCancel<RT>
     where RT : struct, HasInfobipEmailAbstract<RT>
 {

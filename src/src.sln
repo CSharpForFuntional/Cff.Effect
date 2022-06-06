@@ -8,19 +8,21 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		..\.editorconfig = ..\.editorconfig
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cff.Effect.Abstractions", "Cff.Effect.Abstractions\Cff.Effect.Abstractions.csproj", "{2F99E7A8-5D96-4BEB-B81B-DE2986875024}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cff.Effect.Abstractions", "Cff.Effect.Abstractions\Cff.Effect.Abstractions.csproj", "{2F99E7A8-5D96-4BEB-B81B-DE2986875024}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cff.Effect", "Cff.Effect\Cff.Effect.csproj", "{160AD142-7D75-4CAE-89B0-1E7C820B1C87}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cff.Effect", "Cff.Effect\Cff.Effect.csproj", "{160AD142-7D75-4CAE-89B0-1E7C820B1C87}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cff.Effect.Json", "Cff.Effect.Json\Cff.Effect.Json.csproj", "{AC719883-68D8-45CC-BEBE-0B88234D91DC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cff.Effect.Json", "Cff.Effect.Json\Cff.Effect.Json.csproj", "{AC719883-68D8-45CC-BEBE-0B88234D91DC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cff.Effect.Tests", "Cff.Effect.Tests\Cff.Effect.Tests.csproj", "{F2A03AF4-D747-45C4-B790-19F600E565BE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cff.Effect.Tests", "Cff.Effect.Tests\Cff.Effect.Tests.csproj", "{F2A03AF4-D747-45C4-B790-19F600E565BE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cff.Effect.Json.Tests", "Cff.Effect.Json.Tests\Cff.Effect.Json.Tests.csproj", "{E91C7F4A-F139-4588-89CC-32B13AD1F08F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cff.Effect.Json.Tests", "Cff.Effect.Json.Tests\Cff.Effect.Json.Tests.csproj", "{E91C7F4A-F139-4588-89CC-32B13AD1F08F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cff.Effect.Logging", "Cff.Effect.Logging\Cff.Effect.Logging.csproj", "{BD41D494-A5A5-4B4A-BC05-7395A943048B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cff.Effect.Logging", "Cff.Effect.Logging\Cff.Effect.Logging.csproj", "{BD41D494-A5A5-4B4A-BC05-7395A943048B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cff.Effect.Infobip", "Cff.Effect.Infobip\Cff.Effect.Infobip.csproj", "{18F9E3AE-F7FB-48C7-905A-D0DF3191803D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cff.Effect.Infobip", "Cff.Effect.Infobip\Cff.Effect.Infobip.csproj", "{18F9E3AE-F7FB-48C7-905A-D0DF3191803D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cff.Effect.Sha", "Cff.Effect.Sha\Cff.Effect.Sha.csproj", "{91358253-60A2-4F06-B042-3BF1547C9E32}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -116,6 +118,18 @@ Global
 		{18F9E3AE-F7FB-48C7-905A-D0DF3191803D}.Release|x64.Build.0 = Release|Any CPU
 		{18F9E3AE-F7FB-48C7-905A-D0DF3191803D}.Release|x86.ActiveCfg = Release|Any CPU
 		{18F9E3AE-F7FB-48C7-905A-D0DF3191803D}.Release|x86.Build.0 = Release|Any CPU
+		{91358253-60A2-4F06-B042-3BF1547C9E32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91358253-60A2-4F06-B042-3BF1547C9E32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91358253-60A2-4F06-B042-3BF1547C9E32}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{91358253-60A2-4F06-B042-3BF1547C9E32}.Debug|x64.Build.0 = Debug|Any CPU
+		{91358253-60A2-4F06-B042-3BF1547C9E32}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{91358253-60A2-4F06-B042-3BF1547C9E32}.Debug|x86.Build.0 = Debug|Any CPU
+		{91358253-60A2-4F06-B042-3BF1547C9E32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91358253-60A2-4F06-B042-3BF1547C9E32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91358253-60A2-4F06-B042-3BF1547C9E32}.Release|x64.ActiveCfg = Release|Any CPU
+		{91358253-60A2-4F06-B042-3BF1547C9E32}.Release|x64.Build.0 = Release|Any CPU
+		{91358253-60A2-4F06-B042-3BF1547C9E32}.Release|x86.ActiveCfg = Release|Any CPU
+		{91358253-60A2-4F06-B042-3BF1547C9E32}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
