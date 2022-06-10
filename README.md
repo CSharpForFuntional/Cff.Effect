@@ -16,4 +16,6 @@
    * https://github.com/louthy/language-ext/wiki/How-to-deal-with-side-effects
    
 ## 4. Cats = Category Theory for Scala 
+   * ConcurrentEffect
+
 ![](https://cdn.rawgit.com/tpolecat/cats-infographic/master/cats.svg?cacheBuster=3)
