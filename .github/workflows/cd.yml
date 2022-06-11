@@ -38,7 +38,7 @@ jobs:
       run: |
         cd src
         sed -i "s/<Version>9999.0.0.000/<Version>${{ steps.get_version.outputs.version }}/g" ./Directory.Build.props
-        cat ./common.props
+        cat ./Directory.Build.props
     - name: Generate NuGet packages
       run: | 
         cd src
