@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<coverage version="1.0" date="2022-10-09_06-54-20" tag="43_3213223096">
+  <assembly name="Cff.Effect">
+    <class name="Cff.Effect.Aes`1" coveredlines="10" coverablelines="10" totallines="21" coveredbranches="16" totalbranches="16" coveredcodeelements="2" totalcodeelements="2" />
+    <class name="Cff.Effect.Json`1" coveredlines="2" coverablelines="3" totallines="15" coveredbranches="0" totalbranches="0" coveredcodeelements="2" totalcodeelements="3" />
+    <class name="Cff.Effect.Logging`1" coveredlines="2" coverablelines="3" totallines="15" coveredbranches="0" totalbranches="0" coveredcodeelements="2" totalcodeelements="3" />
+    <class name="Cff.Effect.Sha`1" coveredlines="6" coverablelines="6" totallines="15" coveredbranches="10" totalbranches="10" coveredcodeelements="1" totalcodeelements="1" />
+  </assembly>
+  <assembly name="Cff.Effect.Abstractions">
+    <class name="Cff.Effect.Abstractions.Domain.Aes`1" coveredlines="4" coverablelines="4" totallines="8" coveredbranches="0" totalbranches="0" coveredcodeelements="4" totalcodeelements="4" />
+    <class name="Cff.Effect.Abstractions.Domain.AesKey" coveredlines="4" coverablelines="5" totallines="9" coveredbranches="0" totalbranches="0" coveredcodeelements="3" totalcodeelements="4" />
+    <class name="Cff.Effect.Abstractions.Domain.Sha`1" coveredlines="2" coverablelines="2" totallines="6" coveredbranches="0" totalbranches="0" coveredcodeelements="2" totalcodeelements="2" />
+    <class name="Cff.Effect.Abstractions.HasAesAbstract`1" coveredlines="0" coverablelines="1" totallines="17" coveredbranches="0" totalbranches="2" coveredcodeelements="0" totalcodeelements="1" />
+    <class name="Cff.Effect.Abstractions.HasCancelDefault`1" coveredlines="0" coverablelines="2" totallines="12" coveredbranches="0" totalbranches="0" coveredcodeelements="0" totalcodeelements="2" />
+    <class name="Cff.Effect.Abstractions.HasJsonAbstract`1" coveredlines="1" coverablelines="1" totallines="19" coveredbranches="2" totalbranches="2" coveredcodeelements="1" totalcodeelements="1" />
+  </assembly>
+  <assembly name="Cff.Effect.Aes">
+    <class name="Cff.Effect.Aes.Aes" coveredlines="17" coverablelines="17" totallines="35" coveredbranches="0" totalbranches="0" coveredcodeelements="3" totalcodeelements="3" />
+    <class name="Cff.Effect.Aes.HasAes`1" coveredlines="1" coverablelines="1" totallines="14" coveredbranches="2" totalbranches="2" coveredcodeelements="1" totalcodeelements="1" />
+  </assembly>
+  <assembly name="Cff.Effect.Json">
+    <class name="Cff.Effect.Json.HasJson`1" coveredlines="4" coverablelines="4" totallines="15" coveredbranches="0" totalbranches="0" coveredcodeelements="1" totalcodeelements="1" />
+    <class name="Cff.Effect.Json.Json" coveredlines="13" coverablelines="23" totallines="42" coveredbranches="0" totalbranches="0" coveredcodeelements="3" totalcodeelements="4" />
+  </assembly>
+  <assembly name="Cff.Effect.Logging">
+    <class name="Cff.Effect.Logging.HasLogging`1" coveredlines="1" coverablelines="1" totallines="13" coveredbranches="2" totalbranches="2" coveredcodeelements="1" totalcodeelements="1" />
+    <class name="Cff.Effect.Logging.Logging" coveredlines="9" coverablelines="13" totallines="25" coveredbranches="0" totalbranches="0" coveredcodeelements="3" totalcodeelements="4" />
+  </assembly>
+  <assembly name="Cff.Effect.Sha">
+    <class name="Cff.Effect.Sha.HasSha256`1" coveredlines="1" coverablelines="1" totallines="11" coveredbranches="2" totalbranches="2" coveredcodeelements="1" totalcodeelements="1" />
+    <class name="Cff.Effect.Sha.HasSha512`1" coveredlines="1" coverablelines="1" totallines="11" coveredbranches="2" totalbranches="2" coveredcodeelements="1" totalcodeelements="1" />
+    <class name="Cff.Effect.Sha.Sha256" coveredlines="1" coverablelines="1" totallines="9" coveredbranches="0" totalbranches="0" coveredcodeelements="1" totalcodeelements="1" />
+    <class name="Cff.Effect.Sha.Sha512" coveredlines="1" coverablelines="1" totallines="9" coveredbranches="0" totalbranches="0" coveredcodeelements="1" totalcodeelements="1" />
+  </assembly>
+</coverage>
