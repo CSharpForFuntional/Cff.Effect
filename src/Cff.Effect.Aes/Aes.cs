@@ -23,11 +23,11 @@ internal readonly record struct Aes(AesKey AesKey) : IAes
         return (body, nonce, tag);
     }
 
-    public string Decrypt((byte[] Body, byte[] Nonce, byte[] Tag) data)
+    public string Decrypt(byte[] body, byte[] nonce, byte[] tag)
     {
         using var aes = new AesGcm(AesKey.Value);
-        var plaintextBytes = new byte[data.Body.Length];
-        aes.Decrypt(data.Nonce, data.Body, data.Tag, plaintextBytes);
+        var plaintextBytes = new byte[body.Length];
+        aes.Decrypt(nonce, body, tag, plaintextBytes);
 
         return Encoding.UTF8.GetString(plaintextBytes);
     }

@@ -6,7 +6,7 @@ namespace Cff.Effect.Abstractions;
 public interface IAes
 {
     (byte[] Body, byte[] Nonce, byte[] Tag) Encrypt(string source);
-    string Decrypt((byte[] Body, byte[] Nonce, byte[] Tag) data);
+    string Decrypt(byte[] body, byte[] nonce, byte[] tag);
 }
 
 [Typeclass("*")]

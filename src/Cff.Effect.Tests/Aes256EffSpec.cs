@@ -18,13 +18,14 @@ public class Aes256EffSpec
     public record Stub(string Value, int Index);
 
     [Theory, AutoData]
-    public async Task EncryptAndDecrypt(Stub value, CancellationTokenSource cts!!, AesKey aesKey)
+    public async Task EncryptAndDecrypt(Stub value, CancellationTokenSource cts, AesKey aesKey)
     {
-        var q = from _1 in Aes<RT>.EncryptEff(value)
+        var q = from __ in unitAff
+                from _1 in Aes<RT>.EncryptEff(value)
                 from _2 in Aes<RT>.DecryptEff(_1)
                 select _2;
 
-        var r = q.Run(new RT(cts, aesKey));
+        var r = await q.Run(new RT(cts, aesKey));
 
         Assert.Equal(value, r.ThrowIfFail());
     }
